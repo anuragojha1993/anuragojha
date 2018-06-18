@@ -1,0 +1,10 @@
+#data fetch from api and store into file
+
+
+
+import requests
+import json
+r = requests.get('http://httpbin.org/get')
+with open('data.txt', 'w') as outfile:
+    outfile.write(r.text)
+  
